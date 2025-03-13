@@ -1,0 +1,179 @@
+//DEĞİŞKENLER - VARIABLES
+/*
+ Değişken tanımlamak için iki farklı anahtar vardır.
+ let : Sabit ve değeri değişmeyen değişkenler için kullanılır.
+ var : Değeri değişebilen değişkenler için kullanılır.
+*/
+var sayi = 10
+let sayi2 = 20
+
+// Değişkenlerin türlerini belirmek için : işareti ile sağına türü yazılır.
+
+var name : String = "Ali"
+let country : String = "Türkiye"
+
+// Değişkenler arası dönüşüm yapılabilir. Stringten int'e dönüşümde opsiyoneller kullanılır.
+
+var deger : String = String(10)
+print(deger)
+
+//Değişken tanımlayarak değer kısmı boş bırakılabilir ve sonra kullanılabilir.
+
+var degisken : String
+degisken = "Ali"
+print(degisken)
+
+// DİZİLER - ARRAYS
+/*
+ Diziler birden çok verinin tek bir koleksiyonda toplanmasını sağlar.
+ Asıl amacı aynı türden değerlerin aynı dizide barındırılmasıdır.
+ Bazı anahtar kelimelerle bu koleksiyon farklı türde değerler de alabilir ancak metotlarına sınırlama getirmiş olunur.
+ */
+
+var dizi = [10,20,30,40,50]
+//dizi.count  Eleman sayısını verir.
+//dizi.isEmpty  Dolu-boş kontrolü yapar.
+//dizi.first  İlk elemanı verir.
+//dizi.last  Son elemanı verir.
+//dizi.append(60)  Diziye eleman ekler.
+//dizi.removeLast() Son elemanı siler.
+//dizi.sort() Diziyi değere veya alfabetik sıraya göre sıralar.
+
+// Eğer dizide birbirinden farklı veri tipleri bulunacaksa as [Any] eki ile yapılır. Ancak tüm metotlara erişim kaybedilir.
+let dizi2 = [10,"Ahmet",true] as [Any]
+dizi2[0]
+
+// SET Veri Yapısı
+/*
+ Set veri yapısında dizi gibi çalışır. Ancak her değerden sadec bir tane tutulur ve veri değerleri benzersizdir.
+ Tanımlarken dizi gibi tanımlandıktan sonra : Set ibaresi eklenir.
+ */
+let set1 : Set = [10,20,30,49,49]
+let set2 : Set = [10,60,70]
+
+//union anahtar kelimesi iki seti birleştirir. Aynı değerden sadece bir tane vardır.
+set1.union(set2)
+
+//SÖZLÜK - DİCTİONARY
+/*
+ Anahtar ve değer ilişkisi vardır. Veri türü bağımsızdır.
+ [Anahtar : Deger]
+ */
+var myFavoriteDirectors = ["Pulp Fiction" : "Tarantino","Lock, Stock" : "Guy Ritchie","The Dark Knight": "Christopher Nolan"]
+
+myFavoriteDirectors["Pulp Fiction"]
+myFavoriteDirectors["The Dark Knight"]
+
+myFavoriteDirectors["Pulp Fiction"] = "Quentin Tarantino"
+
+myFavoriteDirectors["Seven Samurai"] = "Akira Kurisowa"
+print(myFavoriteDirectors)
+
+var myDictionary = ["Run" : 100, "Swim" : 200, "Basketball" : 300]
+myDictionary["Run"]
+
+//DÖNGÜLER - LOOPS
+var number = 0
+while number <= 10 {
+    //print(number)
+    number += 1
+}
+
+var characterAlive = true
+
+while characterAlive == true {
+    //print("character alive")
+    characterAlive = false
+}
+
+//For Loop
+
+var myFruitArray = ["Banana","Apple","Orange"]
+
+for fruit in myFruitArray {
+    print(fruit)
+}
+
+var myNumbers = [10,20,30,40,50,60]
+
+for num in myNumbers {
+    print(num / 5)
+}
+
+for mynewinteger in 1 ... 5 {
+    print(mynewinteger*5)
+}
+
+// IF - ELSE KONTROL YAPILARI
+var myAge = 90
+
+//<, >, ==, !=
+//AND &&
+//OR ||
+
+if myAge < 30 {
+    print("30 -")
+} else if myAge > 30 && myAge < 40 {
+    print("30s")
+} else if myAge > 40 && myAge < 50 {
+    print("40 +")
+} else {
+    print("50 +")
+}
+
+//AND
+3 < 5 && 8 < 7
+//OR
+3 < 5 || 8 < 7
+
+var myString = "James"
+
+if myString == "James" {
+    print("yes")
+}
+
+// FONKSİYONLAR
+func myFunction(){
+    print("my function")
+}
+myFunction()
+
+//Input & Output & Return
+
+func sumFunction(x: Int, y: Int) -> Int {
+    return x + y
+}
+
+let myFunctionVariable = sumFunction(x: 10, y: 20)
+print(myFunctionVariable)
+
+func logicFunction(a: Int, b: Int) -> String {
+    if a > b {
+        return "Greater"
+    } else {
+        return "Less"
+    }
+}
+logicFunction(a: -10, b: 0)
+
+//OPSİYONELLER
+/*
+ Opsiyonellerle çalışırken ? işareti belirsizliği ifade eder.
+ ! işareti kesinlikle belirttiğimiz değerin geleceğini garanti eder.
+ ?? işareti eğer ki belirtilen değer gelmezse default değer ataması yapar.
+ */
+var myName : String?
+
+myName?.uppercased()
+
+//optionals : ? vs !
+
+var mynewAge = "r"
+
+var myInteger = (Int(mynewAge) ?? 0) * 5
+// if let yapısı verilen değerin kontrolü için gereklidir.
+if let myNumber = Int(mynewAge) {
+    print(myNumber * 5)
+} else {
+    print("wrong input")
+}

@@ -1,0 +1,70 @@
+ Created by Ozan Bali
+ 03.11.2025
+
+ --------- Terminal Komutları ---------
+ 
+ clear = Konsolu temizler.
+ 
+ pwd (print working directory) = Anlık çalıştığınız dosya ismini gösterir.
+ 
+ ls (list) = Bulunulan konumdaki dosyalar ve klasörleri listeler.
+ 
+ ls -la = Gizli dosyaları gösterir.
+ 
+ cd abcd (change directory) = abcd ismindeki konuma gitmeye yarar.
+ 
+ cd .. = Bir konum geri gelmeye yarar.
+ 
+ touch dosyaismi = Yeni dosyaismi olan dosya oluşturur, klasör oluşturmaz.
+ 
+ mkdir dosyaismi = dosyaismi adlı bir klasör oluşturur.
+ 
+ rm dosyaismi = dosyaismi olan dosyayı siler, klasör silemez.
+ 
+ rm -rf dosyaismi = dosyaismi adlı klasörü siler.
+ 
+ git status = Git ile alakalı bir şey olup olmadığını sorgular.
+ 
+ --------- CMD Git Ayar Komutları ---------
+ 
+ git config --global user.name "İsim"
+ 
+ git config --global user.email email
+ 
+ git status = Dosyanın durumunu belirtir.
+ 
+ git init = Git'i aktif eder.
+ 
+ --------- Git-Github Terimleri ---------
+ 
+ git commit -m "mesaj" = Kaydetme anlamına gelir. Checkpoint manası vardır. Mesajı önemlidir.
+ 
+ git add dosyaismi = Dosya git tarafından takip edilir.
+ 
+ git add . = Her şeyi takip eder.
+ 
+ git log = Tüm bilgileri gösterir.
+ 
+ git restore dosyaismi = Tek bir dosyayı önceki commit haline geri döndürür.
+ 
+ git branch = Güncel olarak hangi yol üstünde olduğunu gösterir.
+ 
+ git branch yolisim = Yeni yolumuzu ekler.
+ 
+ git switch yolisim = branchler arası geçişi sağlar
+
+ git merge branchisim = merge yazılmadan hangi branchteysek branchismini bulunulan branch içine kaydeder.
+ 
+ git config --global core.editor "subl -v -n"
+ *Conflictler merge sırasında çıkarsa manuel çözülür.
+ 
+ git checkout yolisim = Commitler arası gezinmeyi sağlar.Buradam başka bir branch açılabilir.
+ 
+ git switch main = En son haline geri döndürür.
+ 
+ git reset --hard gidilmekistenenadres = Adresten sonraki tüm commitleri siler.
+ insert moduna geçerse esc basarak : ardına wq enterleyerek kaydedebilirsin.
+ 
+ git stash = Zulalamaya yarar. Çok fazla kullanılmaz.
+ 
+ git tag = Versiyonlamada kullanılır. GitHub için versiyonlamada işimize yarar.
